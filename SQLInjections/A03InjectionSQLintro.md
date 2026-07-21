@@ -15,7 +15,7 @@ UPDATE employees
 SET department = 'Sales' 
 WHERE first_name = 'Tobi' AND last_name = 'Barnett';
 ```
-![SQLintro02](sql2.jpg)
+![SQLintro02](sgl2.jpg)
 
 
 

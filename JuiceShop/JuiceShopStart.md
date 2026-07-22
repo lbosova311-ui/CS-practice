@@ -18,7 +18,7 @@
 * **Завдання:** Знайти сторінку зі списком усіх челенджів.
 * **Як пройти:** Спробуйте вгадати URL (наприклад, перевірте `/score-board` або `/scoreboard`). Розробники часто ховають такі технічні сторінки в коді або через роутинг. Зазвичай багато цікавого можна знайти у файлі `main.js`. Тобто натискаємо F12, відкривається інспектор і далі шукаємо в коді щось схоже на **scoreboard**. Отримуємо наступний результат:
 
-![scoreboard](JuiceShop_scoreboard.png)
+![scoreboard](juice2.jpg)
 
 
 * **Пряме посилання:** http://localhost:3000/#/score-board
@@ -27,20 +27,20 @@
 
 #### Атака на пошуковий рядок (DOM XSS)
 * **Завдання:** Виконати XSS-атаку.
-![JuiceShop_DOMXSS_task.png](JuiceShop_DOMXSS_task.png)
+![JuiceShop_DOMXSS_task.png](juice3.jpg)
 * **Як пройти:** У полі пошуку (Search) вгорі сторінки введіть скрипт:
     `<iframe src="javascript:alert('xss')">`
 * **Результат:** Має з'явитися вікно з повідомленням, після чого челендж буде зараховано.
-![JuiceShop_DOMXSS](JuiceShop_DOMXSS.png)
-* **Додатково** робимо відправку пейлоада
-![JuiceShop_DOMXSS_Payload](JuiceShop_DOMXSS_Payload.png)
+![JuiceShop_DOMXSS](juice4.jpg)
+* **Додатково** робимо відправку пейлоада і тримуємо такий результат
+![JuiceShop_DOMXSS_Payload](juice5.jpg)
 
 #### Витік конфіденційних даних (Sensitive Data Exposure)
 * **Завдання:** Знайти файл, який не має бути публічним.
 Спочатку шукаємо відкриті директорії, але отримуємо помилку:
-![JuiceShop_gobuster_fail](JuiceShop_gobuster_fail.png)
+![JuiceShop_gobuster_fail](juice6.jpg)
 Вносимо зміни, які нам рекомендовано, та знову запускаємо сканування:
-![JuiceShop_gobuster_ok](JuiceShop_gobuster_ok.png)
+![JuiceShop_gobuster_ok](juice7.jpg)
 Випадково :-) проходимо *Security misconfiguration*, зламавши *ДжусіШоп*:
 ![JuiceShop_ErrorHandling](JuiceShop_ErrorHandling.png)
 Перезпускаємо контейнер та йдемо до знайденого FTP:

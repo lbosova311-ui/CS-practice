@@ -42,19 +42,16 @@
 Вносимо зміни, які нам рекомендовано, та знову запускаємо сканування:
 ![JuiceShop_gobuster_ok](juice7.jpg)
 Випадково :-) проходимо *Security misconfiguration*, зламавши *ДжусіШоп*:
-![JuiceShop_ErrorHandling](JuiceShop_ErrorHandling.png)
+![JuiceShop_ErrorHandling](juice8.jpg)
 Перезпускаємо контейнер та йдемо до знайденого FTP:
-![JuiceShop_ftp_01](JuiceShop_ftp_01.png)
+![JuiceShop_ftp_01](juice9.jpg)
 
 * **Як пройти:** Перейдіть до директорії **http://localhost:3000/ftp**. Там зазвичай знаходяться бекапи або `.md` файли. 
 * **Підказка:** Спробуйте завантажити файли, які сервер намагається блокувати, використовуючи обхід фільтрів (наприклад, додаючи `%2500.md` до назви).
 
-![JuiceShop_ftp_0poison.png](JuiceShop_ftp_0poison.png)
-або якийсь інший файл:
-![JuiceShop_ftp_0poison2](JuiceShop_ftp_0poison2.png)
-
+![JuiceShop_ftp_0poison.png](juice10.jpg)
 Як результат - пройшли ще декілька завдань:
-![JuiceShop_ftp_results](JuiceShop_ftp_results.png)
+![JuiceShop_ftp_results](juice11.jpg)
 
 ### 4. Рівень 2: Злам акаунтів (Authentication)
 
